@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row mt-5">
+
+        <div class="col-6">
+            <h3>Reservations</h3>
+            <br>
+            <div class="cart-item" *ngFor="let item of items">
+                <span class="text-danger font-weight-bold">{{ item.destinationName }} </span>
+                <span>{{ item.price}} Euros</span>
+            </div>
+        </div>
+
+        <div class="col-6">
+
+            <h3>Information about the Traveler</h3>
+            <br>
+            <form class="bg-secondary p-3" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+                <div>
+                    <label for="name">Name</label>
+                </div>
+                <div>
+                    <input id="name" type="text" formControlName="name">
+                </div>
+
+                <div>
+                    <label for="address">Address </label>
+                </div>
+                <div>
+                    <input id="address" type="text" formControlName="address">
+                </div>
+
+                <div>
+                    <label for="telephon">Telephone Number</label>
+                </div>
+                <div>
+                    <input id="name" type="text" formControlName="name">
+                </div>
+                <div>
+                    <label for="email"> E-Mail address</label>
+                </div>
+                <div>
+                    <input id="name" type="text" formControlName="name">
+                </div>
+                <br>
+
+                <button class="btn btn-info" type="submit">Purchase</button>
+                <div id="text" class="text-danger"></div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

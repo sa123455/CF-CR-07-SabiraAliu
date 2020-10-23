@@ -1,0 +1,23 @@
+<!-- <div class="card" style="width: 18rem;">
+    <div *ngFor="let travel of travels ; index as travelId">
+        <img src="{{travel.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{travel.destinationName}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a [routerLink]="['/travels', travelId]" class="btn btn-primary">See Details</a>
+        </div>
+    </div>
+</div> -->
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mb-5" *ngFor="let travel of travels ; index as travelId">
+            <img src="{{travel.image}}" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{travel.destinationName}}</h5>
+
+                <a [routerLink]="['/travels', travelId]" class="btn btn-primary">See Details</a>
+            </div>
+        </div>
+    </div>
+</div>

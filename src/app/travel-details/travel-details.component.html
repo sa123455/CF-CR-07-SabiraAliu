@@ -1,0 +1,20 @@
+<!-- <div *ngIf="travel">
+    <h3>{{ travel.destinationName }}</h3>
+    <h4>{{ travel.price }}</h4>
+    <p>{{ travel.description }}</p>
+
+</div> -->
+
+<div *ngIf="travel" class="card mb-3 border-0">
+
+    <div class="card-body mt-3 text-center text-secondary">
+        <h5 class="card-title font-bold">{{travel.destinationName}}</h5>
+        <p class="card-text">{{travel.description}}</p>
+        <p class="card-text text-danger">Price: {{travel.price}} Euro</p>
+        <p class="card-text">Number of days: {{travel.duration}}</p>
+        <p class="card-text"><small class="text-muted">Start Date {{travel.startDate}}</small></p>
+        <button class="btn btn-danger" (click)="addToCart(travel)">Reserve</button>
+    </div>
+    <img class="dimg" src="{{travel.image}}" class="card-img-top" alt="...">
+
+</div>
